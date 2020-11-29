@@ -3,7 +3,7 @@
   "id": "cockblocker",
   "version": "${version}",
   "name": "Cockblocker",
-  "description": "Cockblock game-crashing exploits!",
+  "description": "Cockblock game-lagging and game-crashing exploits!",
   "authors": [
     "videogamesm12"
   ],
