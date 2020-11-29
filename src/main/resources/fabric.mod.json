@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "cockblocker",
+  "version": "${version}",
+  "name": "Cockblocker",
+  "description": "Cockblock game-crashing exploits!",
+  "authors": [
+    "videogamesm12"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/cockblocker/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "videogamesm12.cockblocker.client.CockblockerClient"
+    ],
+    "main": [
+      "videogamesm12.cockblocker.Cockblocker"
+    ]
+  },
+  "mixins": [
+    "cockblocker.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.10.1+build.209",
+    "fabric": "*",
+    "minecraft": "1.16.2"
+  }
+}

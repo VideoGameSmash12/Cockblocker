@@ -1,0 +1,26 @@
+{
+  "mappings": {
+    "videogamesm12/cockblocker/mixin/PlayerSkinTextureInvoker": {
+      "stripAlpha": "method_22796(Lnet/minecraft/class_1011;IIII)V"
+    },
+    "videogamesm12/cockblocker/mixin/PlayerSkinTextureInjector": {
+      "remapTexture": "Lnet/minecraft/class_1046;method_22798(Lnet/minecraft/class_1011;)Lnet/minecraft/class_1011;"
+    },
+    "videogamesm12/cockblocker/mixin/ClientAccessor": {
+      "resourceManager": "field_1745:Lnet/minecraft/class_3296;"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "videogamesm12/cockblocker/mixin/PlayerSkinTextureInvoker": {
+        "stripAlpha": "method_22796(Lnet/minecraft/class_1011;IIII)V"
+      },
+      "videogamesm12/cockblocker/mixin/PlayerSkinTextureInjector": {
+        "remapTexture": "Lnet/minecraft/class_1046;method_22798(Lnet/minecraft/class_1011;)Lnet/minecraft/class_1011;"
+      },
+      "videogamesm12/cockblocker/mixin/ClientAccessor": {
+        "resourceManager": "field_1745:Lnet/minecraft/class_3296;"
+      }
+    }
+  }
+}

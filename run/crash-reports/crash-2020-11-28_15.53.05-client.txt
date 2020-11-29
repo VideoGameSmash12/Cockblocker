@@ -1,0 +1,169 @@
+---- Minecraft Crash Report ----
+// Don't be sad, have a hug! <3
+
+Time: 11/28/20 3:53 PM
+Description: Registering texture
+
+java.lang.IllegalArgumentException: (60, 16) outside of image bounds (59, 50)
+	at net.minecraft.client.texture.NativeImage.getPixelColor(NativeImage.java:191)
+	at net.minecraft.client.texture.PlayerSkinTexture.stripAlpha(PlayerSkinTexture.java:209)
+	at net.minecraft.client.texture.PlayerSkinTexture.remapTexture(PlayerSkinTexture.java:183)
+	at net.minecraft.client.texture.PlayerSkinTexture.loadTexture(PlayerSkinTexture.java:143)
+	at net.minecraft.client.texture.PlayerSkinTexture.load(PlayerSkinTexture.java:91)
+	at net.minecraft.client.texture.TextureManager.method_24303(TextureManager.java:96)
+	at net.minecraft.client.texture.TextureManager.registerTexture(TextureManager.java:68)
+	at net.minecraft.client.texture.PlayerSkinProvider.loadSkin(PlayerSkinProvider.java:80)
+	at net.minecraft.client.texture.PlayerSkinProvider.loadSkin(PlayerSkinProvider.java:60)
+	at net.minecraft.client.render.block.entity.SkullBlockEntityRenderer.method_3578(SkullBlockEntityRenderer.java:103)
+	at net.minecraft.client.render.block.entity.SkullBlockEntityRenderer.render(SkullBlockEntityRenderer.java:86)
+	at net.minecraft.client.render.item.BuiltinModelItemRenderer.render(BuiltinModelItemRenderer.java:82)
+	at net.minecraft.client.render.item.ItemRenderer.renderItem(ItemRenderer.java:124)
+	at net.minecraft.client.render.item.ItemRenderer.renderGuiItemModel(ItemRenderer.java:300)
+	at net.minecraft.client.render.item.ItemRenderer.innerRenderInGui(ItemRenderer.java:332)
+	at net.minecraft.client.render.item.ItemRenderer.renderInGuiWithOverrides(ItemRenderer.java:322)
+	at net.minecraft.client.gui.hud.InGameHud.renderHotbarItem(InGameHud.java:1116)
+	at net.minecraft.client.gui.hud.InGameHud.renderHotbar(InGameHud.java:553)
+	at net.minecraft.client.gui.hud.InGameHud.render(InGameHud.java:193)
+	at net.minecraft.client.render.GameRenderer.render(GameRenderer.java:597)
+	at net.minecraft.client.MinecraftClient.render(MinecraftClient.java:1023)
+	at net.minecraft.client.MinecraftClient.run(MinecraftClient.java:656)
+	at net.minecraft.client.main.Main.main(Main.java:215)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.fabricmc.loader.game.MinecraftGameProvider.launch(MinecraftGameProvider.java:227)
+	at net.fabricmc.loader.launch.knot.Knot.init(Knot.java:140)
+	at net.fabricmc.loader.launch.knot.KnotClient.main(KnotClient.java:26)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at net.minecraft.client.texture.NativeImage.getPixelColor(NativeImage.java:191)
+	at net.minecraft.client.texture.PlayerSkinTexture.stripAlpha(PlayerSkinTexture.java:209)
+	at net.minecraft.client.texture.PlayerSkinTexture.remapTexture(PlayerSkinTexture.java:183)
+	at net.minecraft.client.texture.PlayerSkinTexture.loadTexture(PlayerSkinTexture.java:143)
+	at net.minecraft.client.texture.PlayerSkinTexture.load(PlayerSkinTexture.java:91)
+
+-- Resource location being registered --
+Details:
+	Resource location: minecraft:skins/1555671b9619860e7d4a7c4c984746e009bb4843
+	Texture object class: net.minecraft.client.texture.PlayerSkinTexture
+Stacktrace:
+	at net.minecraft.client.texture.TextureManager.method_24303(TextureManager.java:96)
+	at net.minecraft.client.texture.TextureManager.registerTexture(TextureManager.java:68)
+	at net.minecraft.client.texture.PlayerSkinProvider.loadSkin(PlayerSkinProvider.java:80)
+	at net.minecraft.client.texture.PlayerSkinProvider.loadSkin(PlayerSkinProvider.java:60)
+	at net.minecraft.client.render.block.entity.SkullBlockEntityRenderer.method_3578(SkullBlockEntityRenderer.java:103)
+	at net.minecraft.client.render.block.entity.SkullBlockEntityRenderer.render(SkullBlockEntityRenderer.java:86)
+	at net.minecraft.client.render.item.BuiltinModelItemRenderer.render(BuiltinModelItemRenderer.java:82)
+	at net.minecraft.client.render.item.ItemRenderer.renderItem(ItemRenderer.java:124)
+	at net.minecraft.client.render.item.ItemRenderer.renderGuiItemModel(ItemRenderer.java:300)
+
+-- Item being rendered --
+Details:
+	Item Type: player_head
+	Item Damage: 0
+	Item NBT: {SkullOwner:{Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHBzOi8vd3d3Lm1pbmVjcmFmdC5uZXQvY29udGVudC9kYW0vZnJhbmNoaXNlL2xvZ29zL01vamFuZy1TdHVkaW9zLUxvZ28tUmVkYm94LmpwZyJ9fX0="}]},Id:[I;864093861,-1498337021,-1458289477,591826420]},SkullOwnerOrig:"bbbbbbbb-bbbb-bbbb-bbbb-bbbaaaaaaaaa",display:{Name:'{"text":"small image like my dick"}'}}
+	Item Foil: false
+Stacktrace:
+	at net.minecraft.client.render.item.ItemRenderer.innerRenderInGui(ItemRenderer.java:332)
+	at net.minecraft.client.render.item.ItemRenderer.renderInGuiWithOverrides(ItemRenderer.java:322)
+	at net.minecraft.client.gui.hud.InGameHud.renderHotbarItem(InGameHud.java:1116)
+	at net.minecraft.client.gui.hud.InGameHud.renderHotbar(InGameHud.java:553)
+	at net.minecraft.client.gui.hud.InGameHud.render(InGameHud.java:193)
+
+-- Affected level --
+Details:
+	All players: 1 total; [ClientPlayerEntity['Player520'/137, l='ClientLevel', x=-154.91, y=68.58, z=93.33]]
+	Chunk stats: Client Chunk Cache: 841, 357
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (-64,68,97), Chunk: (at 0,4,1 in -4,6; contains blocks -64,0,96 to -49,255,111), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 12459 game time, 12459 day time
+	Server brand: fabric
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.world.ClientWorld.addDetailsToCrashReport(ClientWorld.java:449)
+	at net.minecraft.client.MinecraftClient.addDetailsToCrashReport(MinecraftClient.java:2183)
+	at net.minecraft.client.MinecraftClient.run(MinecraftClient.java:674)
+	at net.minecraft.client.main.Main.main(Main.java:215)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.fabricmc.loader.game.MinecraftGameProvider.launch(MinecraftGameProvider.java:227)
+	at net.fabricmc.loader.launch.knot.Knot.init(Knot.java:140)
+	at net.fabricmc.loader.launch.knot.KnotClient.main(KnotClient.java:26)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.2
+	Minecraft Version ID: 1.16.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_272, Eclipse OpenJ9
+	Java VM Version: Eclipse OpenJ9 VM (JRE 1.8.0 Windows 10 amd64-64-Bit Compressed References 20201022_871 (JIT enabled, AOT enabled)
+OpenJ9   - 0394ef754
+OMR      - 582366ae5
+JCL      - 41f03341d5 based on jdk8u272-b10), Eclipse OpenJ9
+	Memory: 256151752 bytes (244 MB) / 824639488 bytes (786 MB) up to 4272095232 bytes (4074 MB)
+	CPUs: 16
+	JVM Flags: 3 total; -Xoptionsfile=C:\Users\Video\.jdks\adopt-openj9-1.8.0_272\jre\bin\compressedrefs\options.default -Xlockword:mode=default,noLockword=java/lang/String,noLockword=java/util/MapEntry,noLockword=java/util/HashMap$Entry,noLockword=org/apache/harmony/luni/util/ModifiedMap$Entry,noLockword=java/util/Hashtable$Entry,noLockword=java/lang/invoke/MethodType,noLockword=java/lang/invoke/MethodHandle,noLockword=java/lang/invoke/CollectHandle,noLockword=java/lang/invoke/ConstructorHandle,noLockword=java/lang/invoke/ConvertHandle,noLockword=java/lang/invoke/ArgumentConversionHandle,noLockword=java/lang/invoke/AsTypeHandle,noLockword=java/lang/invoke/ExplicitCastHandle,noLockword=java/lang/invoke/FilterReturnHandle,noLockword=java/lang/invoke/DirectHandle,noLockword=java/lang/invoke/ReceiverBoundHandle,noLockword=java/lang/invoke/DynamicInvokerHandle,noLockword=java/lang/invoke/FieldHandle,noLockword=java/lang/invoke/FieldGetterHandle,noLockword=java/lang/invoke/FieldSetterHandle,noLockword=java/lang/invoke/StaticFieldGetterHandle,noLockword=java/lang/invoke/StaticFieldSetterHandle,noLockword=java/lang/invoke/IndirectHandle,noLockword=java/lang/invoke/InterfaceHandle,noLockword=java/lang/invoke/VirtualHandle,noLockword=java/lang/invoke/PrimitiveHandle,noLockword=java/lang/invoke/InvokeExactHandle,noLockword=java/lang/invoke/InvokeGenericHandle,noLockword=java/lang/invoke/VarargsCollectorHandle,noLockword=java/lang/invoke/ThunkTuple -Xjcl:jclse29
+	Fabric Mods: 
+		cockblocker: Cockblocker 1.0.0
+		fabric: Fabric API 0.20.1+build.401-1.16
+		fabric-api-base: Fabric API Base 0.1.3+12a8474c4e
+		fabric-blockrenderlayer-v1: Fabric BlockRenderLayer Registration (v1) 1.1.4+c6a8ea894e
+		fabric-command-api-v1: Fabric Command API (v1) 1.0.8+5ce533984e
+		fabric-commands-v0: Fabric Commands (v0) 0.2.0+52d308364e
+		fabric-containers-v0: Fabric Containers (v0) 0.1.8+045df74f4e
+		fabric-content-registries-v0: Fabric Content Registries (v0) 0.1.9+059ea8664e
+		fabric-crash-report-info-v1: Fabric Crash Report Info (v1) 0.1.2+b7f9825d4e
+		fabric-events-interaction-v0: Fabric Events Interaction (v0) 0.4.0+e2e6cdad4e
+		fabric-events-lifecycle-v0: Fabric Events Lifecycle (v0) 0.2.0+16acbe5b4e
+		fabric-game-rule-api-v1: Fabric Game Rule API (v1) 1.0.1+91555cd14e
+		fabric-item-api-v1: Fabric Item API (v1) 1.1.0+29679fd64e
+		fabric-item-groups-v0: Fabric Item Groups (v0) 0.2.0+438f96364e
+		fabric-key-binding-api-v1: Fabric Key Binding API (v1) 1.0.1+730711c64e
+		fabric-keybindings-v0: Fabric Key Bindings (v0) 0.2.0+3fa9f7c54e
+		fabric-lifecycle-events-v1: Fabric Lifecycle Events (v1) 1.2.0+74cc3b204e
+		fabric-loot-tables-v1: Fabric Loot Tables (v1) 1.0.1+432ea1884e
+		fabric-mining-levels-v0: Fabric Mining Levels (v0) 0.1.2+b764ce994e
+		fabric-models-v0: Fabric Models (v0) 0.1.0+dfdb52d64e
+		fabric-networking-blockentity-v0: Fabric Networking Block Entity (v0) 0.2.5+b50ffc7b4e
+		fabric-networking-v0: Fabric Networking (v0) 0.1.10+e00ecb5f4e
+		fabric-object-builder-api-v1: Fabric Object Builder API (v1) 1.7.0+432ea1884e
+		fabric-object-builders-v0: Fabric Object Builders (v0) 0.7.0+432ea1884e
+		fabric-particles-v1: fabric-particles-v1 0.2.2+fb0d9b0e4e
+		fabric-registry-sync-v0: Fabric Registry Sync (v0) 0.4.5+fcdfdfa14e
+		fabric-renderer-api-v1: Fabric Renderer API (v1) 0.3.0+8bcfced84e
+		fabric-renderer-indigo: Fabric Renderer - Indigo 0.4.0+8bcfced84e
+		fabric-renderer-registries-v1: Fabric Renderer Registries (v1) 2.1.0+e2862de64e
+		fabric-rendering-data-attachment-v1: Fabric Rendering Data Attachment (v1) 0.1.3+b7f9825d4e
+		fabric-rendering-fluids-v1: Fabric Rendering Fluids (v1) 0.1.11+fb0d9b0e4e
+		fabric-rendering-v0: Fabric Rendering (v0) 1.1.0+534104904e
+		fabric-rendering-v1: Fabric Rendering (v1) 1.3.0+432ea1884e
+		fabric-resource-loader-v0: Fabric Resource Loader (v0) 0.3.1+facf3bbf4e
+		fabric-screen-handler-api-v1: Fabric Screen Handler API (v1) 1.1.0+872498414e
+		fabric-structure-api-v1: Fabric Structure API (v1) 1.0.1+fb0d9b0e4e
+		fabric-tag-extensions-v0: Fabric Tag Extensions (v0) 1.0.3+ac8e8c594e
+		fabric-textures-v0: Fabric Textures (v0) 1.0.4+eae12eb84e
+		fabric-tool-attribute-api-v1: Fabric Tool Attribute API (v1) 1.2.2+ccce563e4e
+		fabricloader: Fabric Loader 0.10.1+build.209
+		minecraft: Minecraft 1.16.2
+	Launched Version: Fabric
+	Backend library: LWJGL version 3.2.2 build 10
+	Backend API: GeForce RTX 2060/PCIe/SSE2 GL version 4.6.0 NVIDIA 456.71, NVIDIA Corporation
+	GL Caps: Using framebuffer using OpenGL 3.0
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fabric'
+	Type: Client (map_client.txt)
+	Graphics mode: fancy
+	Resource Packs: fabric/fabric-networking-blockentity-v0, fabric/fabric-screen-handler-api-v1, fabric/fabric-renderer-api-v1, fabric/fabric-keybindings-v0, fabric/fabricloader, fabric/fabric-tool-attribute-api-v1, fabric/fabric-renderer-indigo, fabric/fabric-containers-v0, fabric/fabric-object-builder-api-v1, fabric/fabric-crash-report-info-v1, fabric/fabric-events-interaction-v0, fabric/fabric-item-api-v1, fabric/fabric-game-rule-api-v1, fabric/fabric-api-base, fabric/fabric-rendering-v0, fabric/fabric-rendering-v1, fabric/fabric-key-binding-api-v1, fabric/fabric-rendering-data-attachment-v1, fabric/fabric-resource-loader-v0, fabric/fabric-textures-v0, fabric/fabric-content-registries-v0, fabric/fabric-tag-extensions-v0, fabric/fabric-rendering-fluids-v1, fabric/fabric-registry-sync-v0, fabric/fabric-blockrenderlayer-v1, fabric/fabric-lifecycle-events-v1, fabric/fabric-mining-levels-v0, fabric/fabric-renderer-registries-v1, fabric/fabric-events-lifecycle-v0, fabric/fabric-loot-tables-v1, fabric/fabric, fabric/fabric-item-groups-v0, fabric/fabric-models-v0, fabric/fabric-object-builders-v0, fabric/fabric-networking-v0
+	Current Language: English (US)
+	CPU: 16x AMD Ryzen 7 2700X Eight-Core Processor 

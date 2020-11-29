@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "videogamesm12.cockblocker.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+    "PlayerSkinTextureInjector",
+    "PlayerSkinTextureInvoker",
+    "ClientAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:forest": "2020-11-27 23:11:50 -0700",
+      "minecraft:river": "2020-11-27 23:13:23 -0700",
+      "minecraft:swamp": "2020-11-27 23:13:39 -0700"
+    },
+    "done": false
+  },
+  "DataVersion": 2578
+}
