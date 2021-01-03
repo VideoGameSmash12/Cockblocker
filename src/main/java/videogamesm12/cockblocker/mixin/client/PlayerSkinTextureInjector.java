@@ -1,4 +1,4 @@
-package videogamesm12.cockblocker.mixin;
+package videogamesm12.cockblocker.mixin.client;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.texture.NativeImage;
@@ -30,7 +30,6 @@ public class PlayerSkinTextureInjector
      * It does not check the default skin, however.
      *
      * @param image NativeImage
-     * @param cir CallbackInfoReturnable<NativeImage>
      */
     @Inject(method = "remapTexture", at = @At("HEAD"), cancellable = true)
     private static void injectRemapTexture(NativeImage image, CallbackInfoReturnable<NativeImage> cir)

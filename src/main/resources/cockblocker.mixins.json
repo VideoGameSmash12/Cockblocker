@@ -6,11 +6,12 @@
   "mixins": [
   ],
   "client": [
-    "ClientAccessor",
-    "EntityRendererInjector",
-    "PlayerSkinTextureInjector",
-    "PlayerSkinTextureInvoker"
+    "client.ClientAccessor",
+    "client.EntityRendererInjector",
+    "client.PlayerSkinTextureInjector",
+    "client.PlayerSkinTextureInvoker"
   ],
+  "server": [],
   "injectors": {
     "defaultRequire": 1
   }

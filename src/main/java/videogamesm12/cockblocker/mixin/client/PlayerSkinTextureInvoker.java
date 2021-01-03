@@ -1,4 +1,4 @@
-package videogamesm12.cockblocker.mixin;
+package videogamesm12.cockblocker.mixin.client;
 
 import net.minecraft.client.texture.NativeImage;
 import net.minecraft.client.texture.PlayerSkinTexture;

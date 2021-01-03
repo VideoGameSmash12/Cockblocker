@@ -1,4 +1,4 @@
-package videogamesm12.cockblocker.mixin;
+package videogamesm12.cockblocker.mixin.client;
 
 import net.minecraft.client.render.entity.EntityRenderer;
 import net.minecraft.text.LiteralText;
@@ -6,6 +6,7 @@ import net.minecraft.text.Text;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
+import videogamesm12.cockblocker.Cockblocker;
 
 /**
  * EntityRendererInjector - Cockblocks exploits related to the entity renderer.
@@ -28,9 +29,9 @@ public class EntityRendererInjector
     @ModifyVariable(method = "renderLabelIfPresent", at = @At(value = "INVOKE"))
     private Text injectRenderLabelIfPresentText(Text text)
     {
-        if (text.getString().length() > 30)
+        if (text.getString().length() > Cockblocker.MAX_ENTITY_NAME_LENGTH)
         {
-            LiteralText ltext = new LiteralText(text.getString().substring(0, 30));
+            LiteralText ltext = new LiteralText(text.getString().substring(0, Cockblocker.MAX_ENTITY_NAME_LENGTH));
             ltext.setStyle(text.getStyle());
             //
             return ltext;
