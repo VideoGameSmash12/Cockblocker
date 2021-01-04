@@ -1,0 +1,36 @@
+{
+  "text.autoconfig.cockblocker.title": "Configure Cockblocker's Patches",
+
+  "text.autoconfig.cockblocker.category.server": "Server-side Patches",
+  "text.autoconfig.cockblocker.category.client": "Client-side Patches",
+
+  "text.autoconfig.cockblocker.option.cnt_booleans": "Enable/Disable Patches",
+  "text.autoconfig.cockblocker.option.cnt_variables": "Customize Patches",
+
+  "text.autoconfig.cockblocker.option.cnt_booleans.use_skin_size_patch": "Skin size patch:",
+  "text.autoconfig.cockblocker.option.cnt_booleans.use_entity_length_patch": "Entity name length patch:",
+  "text.autoconfig.cockblocker.option.cnt_variables.max_entity_name_length": "Maximum name length to render:",
+
+  "text.autoconfig.cockblocker.option.cnt_booleans.use_entity_length_patch.@Tooltip[0]": "This patch mitigates lag caused by entities",
+  "text.autoconfig.cockblocker.option.cnt_booleans.use_entity_length_patch.@Tooltip[1]": "with very long names.",
+
+  "text.autoconfig.cockblocker.option.cnt_booleans.use_skin_size_patch.@Tooltip[0]": "This patch fixes a game-crashing exploit",
+  "text.autoconfig.cockblocker.option.cnt_booleans.use_skin_size_patch.@Tooltip[1]": "caused by skins smaller than the 64 x 32",
+  "text.autoconfig.cockblocker.option.cnt_booleans.use_skin_size_patch.@Tooltip[2]": "minimum resolution.",
+
+  "text.autoconfig.cockblocker.option.srv_booleans": "Enable/Disable Patches",
+  "text.autoconfig.cockblocker.option.srv_variables": "Customize Patches",
+
+  "text.autoconfig.cockblocker.option.srv_booleans.use_setworldspawn_cmd_oob_patch": "/setworldspawn out-of-bounds patch:",
+  "text.autoconfig.cockblocker.option.srv_booleans.use_setworldspawn_cmd_oob_patch.@Tooltip[0]": "This patch fixes a game-crashing exploit in the",
+  "text.autoconfig.cockblocker.option.srv_booleans.use_setworldspawn_cmd_oob_patch.@Tooltip[1]": "/setworldspawn command that allows players",
+  "text.autoconfig.cockblocker.option.srv_booleans.use_setworldspawn_cmd_oob_patch.@Tooltip[2]": "to set the world spawn out of bounds.",
+
+  "text.autoconfig.cockblocker.option.srv_booleans.use_spawnpoint_cmd_oob_patch": "/spawnpoint out-of-bounds patch:",
+  "text.autoconfig.cockblocker.option.srv_booleans.use_spawnpoint_cmd_oob_patch.@Tooltip[0]": "This patch fixes an exploit in the",
+  "text.autoconfig.cockblocker.option.srv_booleans.use_spawnpoint_cmd_oob_patch.@Tooltip[1]": "/spawnpoint command that allows players",
+  "text.autoconfig.cockblocker.option.srv_booleans.use_spawnpoint_cmd_oob_patch.@Tooltip[2]": "to set their spawnpoint out of bounds.",
+
+  "commands.setworldspawn.invalidPosition": "Invalid position for setworldspawn",
+  "commands.spawnpoint.invalidPosition": "Invalid position for spawnpoint"
+}

@@ -11,6 +11,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import videogamesm12.cockblocker.Cockblocker;
 
 import java.io.IOException;
 
@@ -34,26 +35,29 @@ public class PlayerSkinTextureInjector
     @Inject(method = "remapTexture", at = @At("HEAD"), cancellable = true)
     private static void injectRemapTexture(NativeImage image, CallbackInfoReturnable<NativeImage> cir)
     {
-        if (image.getHeight() < 32 || image.getWidth() < 64)
+        if (Cockblocker.config.cnt_booleans.use_skin_size_patch)
         {
-            Identifier id = DefaultSkinHelper.getTexture();
-            //
-            ReloadableResourceManager rm = ((ClientAccessor) MinecraftClient.getInstance()).getResourceManager();
-            ResourceTexture.TextureData data = ResourceTexture.TextureData.load(rm, id);
-            //
-            try
+            if (image.getHeight() < 32 || image.getWidth() < 64)
             {
-                image = data.getImage();
+                Identifier id = DefaultSkinHelper.getTexture();
                 //
-                PlayerSkinTextureInvoker.invokeStripAlpha(image, 0, 0, 32, 16);
-                PlayerSkinTextureInvoker.invokeStripAlpha(image, 0, 16, 64, 32);
-                PlayerSkinTextureInvoker.invokeStripAlpha(image, 16, 48, 48, 64);
+                ReloadableResourceManager rm = ((ClientAccessor) MinecraftClient.getInstance()).getResourceManager();
+                ResourceTexture.TextureData data = ResourceTexture.TextureData.load(rm, id);
                 //
-                cir.setReturnValue(image);
-            }
-            catch (IOException e)
-            {
-                e.printStackTrace();
+                try
+                {
+                    image = data.getImage();
+                    //
+                    PlayerSkinTextureInvoker.invokeStripAlpha(image, 0, 0, 32, 16);
+                    PlayerSkinTextureInvoker.invokeStripAlpha(image, 0, 16, 64, 32);
+                    PlayerSkinTextureInvoker.invokeStripAlpha(image, 16, 48, 48, 64);
+                    //
+                    cir.setReturnValue(image);
+                }
+                catch (IOException e)
+                {
+                    e.printStackTrace();
+                }
             }
         }
     }

@@ -21,20 +21,21 @@ public class EntityRendererInjector
      *
      * The solution implemented here is to simply shorten how much text actually gets rendered.
      *
-     * TODO: Make the maximum length configurable.
-     *
      * @param text Text
      * @return Text
      */
     @ModifyVariable(method = "renderLabelIfPresent", at = @At(value = "INVOKE"))
     private Text injectRenderLabelIfPresentText(Text text)
     {
-        if (text.getString().length() > Cockblocker.MAX_ENTITY_NAME_LENGTH)
+        if (Cockblocker.config.cnt_booleans.use_entity_length_patch)
         {
-            LiteralText ltext = new LiteralText(text.getString().substring(0, Cockblocker.MAX_ENTITY_NAME_LENGTH));
-            ltext.setStyle(text.getStyle());
-            //
-            return ltext;
+            if (text.getString().length() > Cockblocker.config.cnt_variables.max_entity_name_length)
+            {
+                LiteralText ltext = new LiteralText(text.getString().substring(0, Cockblocker.config.cnt_variables.max_entity_name_length));
+                ltext.setStyle(text.getStyle());
+                //
+                return ltext;
+            }
         }
         return text;
     }
