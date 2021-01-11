@@ -21,6 +21,12 @@
   "text.autoconfig.cockblocker.option.srv_booleans": "Enable/Disable Patches",
   "text.autoconfig.cockblocker.option.srv_variables": "Customize Patches",
 
+  "text.autoconfig.cockblocker.option.srv_booleans.use_fire_block_direction_patch": "Fire direction patch:",
+  "text.autoconfig.cockblocker.option.srv_booleans.use_fire_block_direction_patch.@Tooltip[0]": "This patch fixes a game-crashing exploit in",
+  "text.autoconfig.cockblocker.option.srv_booleans.use_fire_block_direction_patch.@Tooltip[1]": "the way the game checks for Obsidian when",
+  "text.autoconfig.cockblocker.option.srv_booleans.use_fire_block_direction_patch.@Tooltip[2]": "Fire blocks are placed, where it crashes",
+  "text.autoconfig.cockblocker.option.srv_booleans.use_fire_block_direction_patch.@Tooltip[3]": "if the fire was upside-down.",
+
   "text.autoconfig.cockblocker.option.srv_booleans.use_setworldspawn_cmd_oob_patch": "/setworldspawn out-of-bounds patch:",
   "text.autoconfig.cockblocker.option.srv_booleans.use_setworldspawn_cmd_oob_patch.@Tooltip[0]": "This patch fixes a game-crashing exploit in the",
   "text.autoconfig.cockblocker.option.srv_booleans.use_setworldspawn_cmd_oob_patch.@Tooltip[1]": "/setworldspawn command that allows players",

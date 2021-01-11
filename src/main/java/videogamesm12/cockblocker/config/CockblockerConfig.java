@@ -30,6 +30,9 @@ public class CockblockerConfig implements ConfigData
 
         @ConfigEntry.Gui.Tooltip(count = 3)
         public boolean use_setworldspawn_cmd_oob_patch = true;
+
+        @ConfigEntry.Gui.Tooltip(count = 4)
+        public boolean use_fire_block_direction_patch = true;
     }
 
     public static class ClientBooleans
