@@ -25,7 +25,7 @@ public class SpawnPointCommandInjector
     private static final SimpleCommandExceptionType INVALID_POSITION_EXCEPTION = new SimpleCommandExceptionType(new TranslatableText("commands.spawnpoint.invalidPosition"));
 
     /**
-     * This fixes an exploit present in versions of Minecraft up to 1.16.4, which takes advantage of an oversight in the
+     * This fixes an exploit present in versions of Minecraft up to 1.16.5, which takes advantage of an oversight in the
      * /spawnpoint command where it doesn't check if the provided coordinates are valid.
      *
      * The solution implemented here checks the coordinates using WorldInvoker to determine whether or not they are

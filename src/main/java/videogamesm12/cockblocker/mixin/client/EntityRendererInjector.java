@@ -16,7 +16,7 @@ import videogamesm12.cockblocker.Cockblocker;
 public class EntityRendererInjector
 {
     /**
-     * This fixes an exploit present in versions of Minecraft up to 1.16.4, which takes advantage of the lag-producing
+     * This fixes an exploit present in versions of Minecraft up to 1.16.5, which takes advantage of the lag-producing
      * side-effects of rendering entities with too much text in a custom name.
      *
      * The solution implemented here is to simply shorten how much text actually gets rendered.

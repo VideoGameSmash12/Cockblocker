@@ -18,7 +18,7 @@ import videogamesm12.cockblocker.Cockblocker;
 public class AbstractFireBlockInjector
 {
     /**
-     * This fixes a game-crashing exploit in Minecraft 1.16.x, which takes advantage of an oversight in the way it
+     * This fixes a game-crashing exploit in Minecraft 1.16 - 1.16.4, which takes advantage of an oversight in the way it
      * checks for Obsidian, which causes servers and clients to crash when the fire block is facing down or up.
      *
      * The solution implemented here is to simply not search for Obsidian blocks if the directions are either of those

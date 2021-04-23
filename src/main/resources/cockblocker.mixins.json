@@ -6,14 +6,17 @@
   "mixins": [
     "both.AbstractFireBlockInjector",
     "both.SetWorldSpawnCommandInjector",
+    "both.SignBlockEntityInjector",
     "both.SpawnPointCommandInjector",
     "both.WorldInvoker"
   ],
   "client": [
     "client.ClientAccessor",
     "client.EntityRendererInjector",
+    "client.InGameHudInjector",
     "client.PlayerSkinTextureInjector",
-    "client.PlayerSkinTextureInvoker"
+    "client.PlayerSkinTextureInvoker",
+    "client.ScreenInjector"
   ],
   "server": [],
   "injectors": {

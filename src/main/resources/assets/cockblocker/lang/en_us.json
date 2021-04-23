@@ -3,20 +3,40 @@
 
   "text.autoconfig.cockblocker.category.server": "Server-side Patches",
   "text.autoconfig.cockblocker.category.client": "Client-side Patches",
+  "text.autoconfig.cockblocker.category.both": "General Patches",
+
+  "text.autoconfig.cockblocker.option.bth_booleans": "Enable/Disable Patches",
+  "text.autoconfig.cockblocker.option.bth_booleans.packets": "Packet Patches",
 
   "text.autoconfig.cockblocker.option.cnt_booleans": "Enable/Disable Patches",
   "text.autoconfig.cockblocker.option.cnt_variables": "Customize Patches",
 
   "text.autoconfig.cockblocker.option.cnt_booleans.use_skin_size_patch": "Skin size patch:",
   "text.autoconfig.cockblocker.option.cnt_booleans.use_entity_length_patch": "Entity name length patch:",
+  "text.autoconfig.cockblocker.option.cnt_booleans.use_absorption_hud_patch": "Absorption heart count patch:",
+  "text.autoconfig.cockblocker.option.cnt_booleans.use_run_command_on_click_patch": "Run command on click patch:",
+
   "text.autoconfig.cockblocker.option.cnt_variables.max_entity_name_length": "Maximum name length to render:",
+  "text.autoconfig.cockblocker.option.cnt_variables.max_absorption_heart_count": "Maximum number of Absorption hearts:",
+  "text.autoconfig.cockblocker.option.cnt_variables.head_patch_method": "Replacement skin texture:",
+
+  "text.autoconfig.cockblocker.option.cnt_variables.head_patch_method.@Tooltip[0]": "The texture used in place of malicious skin textures.",
+  "text.autoconfig.cockblocker.option.cnt_variables.head_patch_method.@Tooltip[1]": "- §avanilla§f: Either Steve or Alex's skin.",
+  "text.autoconfig.cockblocker.option.cnt_variables.head_patch_method.@Tooltip[2]": "- §atexture§f: An exclamation mark.",
 
   "text.autoconfig.cockblocker.option.cnt_booleans.use_entity_length_patch.@Tooltip[0]": "This patch mitigates lag caused by entities",
   "text.autoconfig.cockblocker.option.cnt_booleans.use_entity_length_patch.@Tooltip[1]": "with very long names.",
 
+  "text.autoconfig.cockblocker.option.cnt_booleans.use_absorption_hud_patch.@Tooltip[0]": "This patch mitigates lag caused by rendering",
+  "text.autoconfig.cockblocker.option.cnt_booleans.use_absorption_hud_patch.@Tooltip[1]": "too many Absorption hearts in the HUD.",
+
   "text.autoconfig.cockblocker.option.cnt_booleans.use_skin_size_patch.@Tooltip[0]": "This patch fixes a game-crashing exploit",
   "text.autoconfig.cockblocker.option.cnt_booleans.use_skin_size_patch.@Tooltip[1]": "caused by skins smaller than the 64 x 32",
   "text.autoconfig.cockblocker.option.cnt_booleans.use_skin_size_patch.@Tooltip[2]": "minimum resolution.",
+
+  "text.autoconfig.cockblocker.option.cnt_booleans.use_run_command_on_click_patch.@Tooltip[0]": "This patch completely disables functionality",
+  "text.autoconfig.cockblocker.option.cnt_booleans.use_run_command_on_click_patch.@Tooltip[1]": "for \"run_command\" click events, nullifying",
+  "text.autoconfig.cockblocker.option.cnt_booleans.use_run_command_on_click_patch.@Tooltip[2]": "the effects of command books in the process.",
 
   "text.autoconfig.cockblocker.option.srv_booleans": "Enable/Disable Patches",
   "text.autoconfig.cockblocker.option.srv_variables": "Customize Patches",
@@ -26,6 +46,9 @@
   "text.autoconfig.cockblocker.option.srv_booleans.use_fire_block_direction_patch.@Tooltip[1]": "the way the game checks for Obsidian when",
   "text.autoconfig.cockblocker.option.srv_booleans.use_fire_block_direction_patch.@Tooltip[2]": "Fire blocks are placed, where it crashes",
   "text.autoconfig.cockblocker.option.srv_booleans.use_fire_block_direction_patch.@Tooltip[3]": "if the fire was upside-down.",
+  "text.autoconfig.cockblocker.option.srv_booleans.use_fire_block_direction_patch.@Tooltip[4]": "§8--",
+  "text.autoconfig.cockblocker.option.srv_booleans.use_fire_block_direction_patch.@Tooltip[5]": "§7This patch is redundant if you are using",
+  "text.autoconfig.cockblocker.option.srv_booleans.use_fire_block_direction_patch.@Tooltip[6]": "§71.16.5+ as the exploit was fixed in 1.16.5.",
 
   "text.autoconfig.cockblocker.option.srv_booleans.use_setworldspawn_cmd_oob_patch": "/setworldspawn out-of-bounds patch:",
   "text.autoconfig.cockblocker.option.srv_booleans.use_setworldspawn_cmd_oob_patch.@Tooltip[0]": "This patch fixes a game-crashing exploit in the",

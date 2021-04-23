@@ -4,7 +4,6 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.texture.NativeImage;
 import net.minecraft.client.texture.PlayerSkinTexture;
 import net.minecraft.client.texture.ResourceTexture;
-import net.minecraft.client.util.DefaultSkinHelper;
 import net.minecraft.resource.ReloadableResourceManager;
 import net.minecraft.util.Identifier;
 import org.spongepowered.asm.mixin.Mixin;
@@ -23,7 +22,7 @@ import java.io.IOException;
 public class PlayerSkinTextureInjector
 {
     /**
-     * This fixes an exploit present in versions of Minecraft up to 1.16.4, which takes advantage of a bug in the skins
+     * This fixes an exploit present in versions of Minecraft up to 1.16.5, which takes advantage of a bug in the skins
      * handler that causes clients to crash if a provided skin texture is too small.
      *
      * The solution to the exploit (one which does not require the game's code to be modified directly) is to add a
@@ -39,7 +38,7 @@ public class PlayerSkinTextureInjector
         {
             if (image.getHeight() < 32 || image.getWidth() < 64)
             {
-                Identifier id = DefaultSkinHelper.getTexture();
+                Identifier id = Cockblocker.config.cnt_variables.head_patch_method.identifier;
                 //
                 ReloadableResourceManager rm = ((ClientAccessor) MinecraftClient.getInstance()).getResourceManager();
                 ResourceTexture.TextureData data = ResourceTexture.TextureData.load(rm, id);
